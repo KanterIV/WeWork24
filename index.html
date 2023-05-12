@@ -23,12 +23,31 @@
         <div class="top-line">
           <nav class="navigation">
             <a class="logo" href="./index.html">
-              <svg class="logo-icon" width="62" height="62">
-                <use href=""></use>
-              </svg>
-              We Work <span class="logo-number">24</span></a
-            >
-
+              <img
+                class="logo-picture"
+                srcset="
+                  ./images/logo/logo-desk@1x.png 1x,
+                  ./images/logo/logo-desk@2x.png 2x,
+                  ./images/logo/logo-desk@3x.png 3x
+                "
+                src="./images/logo/logo@1x.png"
+                alt="Логотип сайта"
+                width="61"
+              />
+              <img
+                class="logo-words"
+                srcset="
+                  ./images/logo/we@1x.png 1x,
+                  ./images/logo/we@2x.png 2x,
+                  ./images/logo/we@3x.png 3x
+                "
+                src="./images/logo/logo@1x.png"
+                alt="Логотип сайта"
+                width="124"
+                height="12"
+              />
+              <!-- We Work <span class="logo-number">24</span> -->
+            </a>
             <ul class="menu">
               <li class="menu-item">
                 <a href="">Онлайн-профессии</a>
@@ -70,7 +89,7 @@
               <div class="search-data"></div>
             </div>
             <ul class="lang-list">
-              <li class="lang-itemm">
+              <li class="lang-item">
                 <a class="lang-link" href="">Ru</a>
                 <ul class="sub-lang">
                   <li class="sub-lang-item">
@@ -83,6 +102,15 @@
               </li>
             </ul>
           </nav>
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="burger-menu" width="20" height="20">
+              <use href="./images/icon.svg#burger-menu-icon"></use>
+            </svg>
+          </button>
           <button class="header-btn" type="button">Личный кабинет</button>
         </div>
         <section class="hero-section">
@@ -96,7 +124,7 @@
         </section>
       </div>
     </header>
-    <main>
+    <!-- <main>
       <section class="professions">
         <div class="container professions-container">
           <h2 class="professions-title">
@@ -435,10 +463,167 @@
           We Work <span class="logo-number">24</span></a
         >
       </div>
-    </footer>
+    </footer> -->
+
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="mobile-menu-btn js-close-menu">
+        <svg class="mobile-menu-icon" width="8" height="8">
+          <use href="./images/icon.svg#icon-closing-button"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu list">
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="">Онлайн-профессии</a>
+          <ul class="mobile-submenu">
+            <li class="mobile-submune-item">
+              <a href="" class="mobile-submenu-link">Оператор чата</a>
+            </li>
+            <li class="mobile-submune-item">
+              <a href="" class="mobile-submenu-link">Клиент-менеджер</a>
+            </li>
+            <li class="mobile-submune-item">
+              <a href="" class="mobile-submenu-link">Трафик-менеджер</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="">Журнал</a>
+          <ul class="mobile-submenu">
+            <li class="mobile-submune-item">
+              <a href="" class="mobile-submenu-link">Что-то</a>
+            </li>
+            <li class="mobile-submune-item">
+              <a href="" class="mobile-submenu-link">Что-то-2</a>
+            </li>
+            <li class="mobile-submune-item">
+              <a href="" class="mobile-submenu-link">Что-то-3</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="mobile-search-box">
+        <input type="text" placeholder="Введите для поиска ..." />
+        <div class="search-btn">
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="search-data"></div>
+      </div>
+      <ul class="mobile-lang-list">
+        <li class="lang-item">
+          <a class="lang-link" href="">Ru</a>
+          <ul class="sub-lang">
+            <li class="sub-lang-item">
+              <a class="sub-lang-link" href="">Ua</a>
+            </li>
+            <li class="sub-lang-item">
+              <a class="sub-lang-link" href="">En</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="mobile-menu list">
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link current link" href="./index.html"
+            >Studio</a
+          >
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link" href="">Contacts</a>
+        </li>
+      </ul>
+      <address class="mobile-contact-info">
+        <ul class="mobile-contact-list list">
+          <li class="mobile-contact-list-item">
+            <a
+              class="mobile-contact-details mobile-contact-phone link"
+              href="tel:+110001111111"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+          <li class="mobile-contact-list-item">
+            <a
+              class="mobile-contact-details mobile-contact-mail link"
+              href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+      </address>
+      <ul class="mobile-socials-list list">
+        <li class="mobile-socials-item">
+          <a
+            href=""
+            class="mobile-socials-link link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="instagram icon"
+          >
+            <svg class="mobile-socials-icon" width="24" height="24">
+              <use href="./images/icon.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-socials-item">
+          <a
+            href=""
+            class="mobile-socials-link link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="twitter icon"
+          >
+            <svg class="mobile-socials-icon" width="24" height="24">
+              <use href="./images/icon.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-socials-item">
+          <a
+            href=""
+            class="mobile-socials-link link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="facebook icon"
+          >
+            <svg class="mobile-socials-icon" width="24" height="24">
+              <use href="./images/icon.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-socials-item">
+          <a
+            href=""
+            class="mobile-socials-link link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="linkedin icon"
+          >
+            <svg class="mobile-socials-icon" width="24" height="24">
+              <use href="./images/icon.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul> -->
+    </div>
 
     <!-- Search window script -->
     <script src="https://kit.fontawesome.com/3d0e27e432.js"></script>
     <script src="./js/search-window.js"></script>
+
+    <!-- Mobile menu script -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
