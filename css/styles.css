@@ -432,6 +432,7 @@ body {
 
 .mobile-search-input:hover,
 .mobile-search-input:focus {
+  outline: none;
   border-color: var(--color-orange);
 }
 
