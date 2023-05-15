@@ -271,7 +271,7 @@ body {
 }
 
 .menu-container {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 999;
@@ -279,7 +279,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 75vh;
+  min-height: 90vh;
+  min-height: -webkit-fill-available;
   padding-top: 41px;
   padding-left: 28px;
   padding-bottom: 32px;
@@ -467,6 +468,10 @@ body {
 .mobile-lang-link {
   font-size: 20px;
   line-height: 1.45;
+}
+
+.whybox {
+  max-height: 100vh;
 }
 
 /* =====================/Top line================= */
