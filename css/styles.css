@@ -271,7 +271,7 @@ body {
 }
 
 .menu-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
@@ -279,7 +279,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  min-height: 90vh;
+  height: 100vh;
   min-height: -webkit-fill-available;
   padding-top: 41px;
   padding-left: 28px;
